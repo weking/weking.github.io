@@ -1,0 +1,60 @@
+{
+  "name": "Weking",
+  "description": "A brand-new modern, responsive and flexible front-end framework",
+  "download": "#",
+  "github": "https://github.com/weking",
+
+  "socials": [
+    {
+      "title": "GitHub",
+      "link": "https://github.com/weking",
+      "anchor": "github"
+    },
+    {
+      "title": "Google+",
+      "link": "https://plus.google.com/u/0/109437832489382753652",
+      "anchor": "gPlus"
+    },
+    {
+      "title": "Twitter",
+      "link": "https://twitter.com/weking_project",
+      "anchor": "twitter"
+    },
+    {
+      "title": "Vkontakte",
+      "link": "http://vk.com/weking_project",
+      "anchor": "vk"
+    }
+  ],
+
+  "menu": [
+    {
+      "title": "Home",
+      "link": "index.html"
+    },
+    {
+      "title": "Get Started",
+      "link": "index.html"
+    },
+    {
+      "title": "Core",
+      "link": "index.html"
+    },
+    {
+      "title": "Addons",
+      "link": "index.html"
+    },
+    {
+      "title": "Layout",
+      "link": "index.html"
+    },
+    {
+      "title": "Templates",
+      "link": "index.html"
+    },
+    {
+      "title": "Experiments",
+      "link": "index.html"
+    }
+  ]
+}

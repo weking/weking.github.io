@@ -1,0 +1,238 @@
+/*!
+ * Name: Weking
+ * Description: A brand-new modern, responsive and flexible front-end framework
+ * Version: 0.1.0
+ * URI: https://github.com/weking/
+ * Author: Constantine Karnaukhov
+ * License: MIT License
+ */
+.navbar[class*=topState] {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+}
+.navbar .menu_header .menu_a {
+  line-height: 53px;
+}
+.navbar_actionBtns {
+  float: right;
+  margin-right: 24px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+@media (max-width: 767px) {
+  .navbar_actionBtns {
+    display: none;
+  }
+}
+.navbar_actionBtns .btn {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media (min-width: 768px) {
+  .navbar .menu_header {
+    width: 100%;
+  }
+  .navbar[class*=fixedTop] .navbar_actionBtns {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.navDrawer_trigger:checked + .navDrawer {
+  z-index: 1000;
+}
+.header {
+  color: #ffffff;
+  margin-bottom: 72px;
+  background-image: url(../img/broken_noise.png);
+  -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+}
+.header_wrap {
+  padding: 112px 0;
+  text-align: center;
+}
+.header_logo {
+  max-width: 300px;
+}
+.header_slogan {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .header_wrap {
+    text-align: left;
+    padding: 144px 0;
+  }
+  .header_wrap .col {
+    float: right;
+  }
+  .header_slogan {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .header_github {
+    margin-left: 15px;
+  }
+}
+.header[class*=primary] .header_wrap {
+  background: rgba(27, 56, 88, 0.5);
+}
+.features_item .card_title {
+  white-space: pre-line;
+}
+.features_item .card_content p:last-child {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .features {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .features_item {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.compare {
+  text-align: center;
+}
+.compare .pricing_plan_list {
+  margin: 0;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?-q3otta');
+  src: url('../fonts/icomoon.eot?#iefix-q3otta') format('embedded-opentype'), url('../fonts/icomoon.woff?-q3otta') format('woff'), url('../fonts/icomoon.ttf?-q3otta') format('truetype'), url('../fonts/icomoon.svg?-q3otta#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.social {
+  text-align: center;
+}
+.social h2 {
+  margin-bottom: 24px;
+}
+.social_list {
+  margin: 0;
+  padding: 0;
+}
+.social_list_li {
+  display: inline-block;
+}
+.social_icon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #1b3858;
+  text-decoration: none;
+  display: block;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.social_icon:hover {
+  color: rgba(27, 56, 88, 0.8);
+}
+.social_icon:before {
+  font-size: 72px;
+}
+.social .social_twitter:before {
+  content: "\f081";
+}
+.social .social_github:before {
+  content: "\f092";
+}
+.social .social_gPlus:before {
+  content: "\f0d4";
+}
+.social .social_vk {
+  width: 78px;
+}
+.social .social_vk:before {
+  content: "\f189";
+}
+.pagination {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 0;
+}
+.pagination_item {
+  padding: 24px;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+.pagination_item:last-child {
+  text-align: right;
+}
+.pagination_item[class*=primary] {
+  background: #1b3858;
+}
+.footer {
+  padding-bottom: 24px;
+  padding-top: 48px;
+  text-align: center;
+}
+.home_call {
+  padding-top: 48px;
+  padding-bottom: 72px;
+}
+.fab {
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+@media (min-width: 768px) {
+  .fab {
+    padding: 24px;
+  }
+}
+.fab_btn {
+  width: 56px;
+  height: 56px;
+  padding: 14px;
+}
+.fab .icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.fab .icon:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 24px;
+}
