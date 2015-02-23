@@ -1,95 +1,260 @@
 <!doctype html>
 <html lang="en" ng-app="weking">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weking</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weking</title>
 
-    <link rel="stylesheet" href="dist/css/weking.min.css">
-    <link rel="stylesheet" href="dist/css/weking-theme.min.css">
+  <link rel="stylesheet" href="dist/css/weking.css">
+  <link rel="stylesheet" href="dist/css/weking-theme.css">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
 </head>
-<body ng-controller="MainCTRL as weking">
+<body>
 
-    <!-- HEADER NAVBAR -->
-    <nav class="navbar menu menu-primary-topState" ng-init="weking.affixNavbar();">
-        <div class="menu_header">
-            <label class="menu_a menu_brand" for="navbarTrigger">
-                <i class="icon icon_menu"></i>
-            </label>
+  <!-- HEADER NAVBAR -->
+  <nav class="navbar menu menu-primary-topState">
+    <div class="menu_header">
+      <label class="menu_a menu_brand" for="navbarTrigger">
+        <i class="icon icon_menu"></i>
+      </label>
 
-            <a class="menu_a menu_brand" href="index.html">{{weking.product.name}}</a>
+      <a class="menu_a menu_brand" href="index.html">Weking</a>
 
-            <div class="navbar_actionBtns">
-                <a class="btn btn-secondary-sm" href="{{weking.product.download}}">Download</a>
-                <a class="btn btn-ghost-sm" href="{{weking.product.github}}">Github</a>
-            </div>
+      <div class="navbar_actionBtns">
+        <a class="btn btn-secondary-sm" href="#">Download</a>
+        <a class="btn btn-default-ghost-sm" href="https://github.com/weking">Github</a>
+      </div>
+    </div>
+  </nav>
+
+  <input type="checkbox" id="navbarTrigger" class="navDrawer_trigger">
+  <section class="navDrawer">
+    <label for="navbarTrigger" class="navDrawer_overlay"></label>
+
+    <section class="navDrawer_content menu col col-xs8-sm6-md4-lg2-vert">
+      <input checked class="menu_trigger" type="checkbox">
+      <ul class="menu_ul">
+        <li class="menu_li"><a class="menu_a" href="index.html">Home</a></li>
+        <li class="menu_li"><a class="menu_a" href="index.html">Get Started</a></li>
+        <li class="menu_li"><a class="menu_a" href="index.html">Core</a></li>
+        <li class="menu_li"><a class="menu_a" href="index.html">Addons</a></li>
+        <li class="menu_li"><a class="menu_a" href="index.html">Layout</a></li>
+        <li class="menu_li"><a class="menu_a" href="index.html">Templates</a></li>
+        <li class="menu_li"><a class="menu_a" href="index.html">Experiments</a></li>
+      </ul>
+    </section>
+  </section>
+
+  <!-- HERO HEADING -->
+  <header class="header header-primary">
+    <div class="header_wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col col-sm6">
+            <img src="dist/img/logo.svg" alt="Weking" class="header_logo"/>
+
+            <p class="header_slogan">A brand-new modern, responsive and flexible front-end framework</p>
+            <a class="header_download btn btn-secondary-xl" href="#">Download</a>
+            <a class="header_github btn btn-default-ghost-xl" href="https://github.com/weking">Github</a>
+          </div>
+
+          <div class="col col-sm6">
+            Weking mascot
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </header>
 
-    <input type="checkbox" id="navbarTrigger" class="navDrawer_trigger">
-    <section class="navDrawer">
-        <label for="navbarTrigger" class="navDrawer_overlay"></label>
+  <!-- MAIN -->
+  <main class="main container">
+    <!-- FEATURES -->
+    <section class="features row row-gutters">
+      <article class="col col-sm3 features_item">
+        <div class="card">
+          <figure class="card_header">
+            <img class="card_img" alt="CSS Power" src="dist/img/feature_css.jpg">
+          </figure>
+          <div class="card_content">
+            <h2 class="card_title">CSS <br/>Power</h2>
+            <p>Sometimes using JavaScript, or jQuery, is unreasonable. If we can create functionality without JavaScript, we must do it with only CSS.</p>
+          </div>
+        </div>
+      </article>
 
-        <section class="navDrawer_content menu col col-xs8-sm6-md4-lg2-vert">
-            <input checked class="menu_trigger" type="checkbox">
-            <ul class="menu_ul">
-                <li class="menu_li" ng-repeat="menu in weking.product.menu"><a class="menu_a" href="{{menu.link}}">{{menu.title}}</a></li>
-            </ul>
-        </section>
+      <article class="col col-sm3 features_item">
+        <div class="card">
+          <figure class="card_header">
+            <img class="card_img" alt="Material Design" src="dist/img/feature_design.jpg">
+          </figure>
+          <div class="card_content">
+            <h2 class="card_title ng-binding">Material <br/>Design</h2>
+
+            <p>Weking elements with the newest Google styleguide in my vision.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col col-sm3 features_item">
+        <div class="card">
+          <figure class="card_header">
+            <img class="card_img" alt="Flexible BEM" src="dist/img/feature_bem.jpg">
+          </figure>
+          <div class="card_content">
+            <h2 class="card_title">Flexible <br/>BEM</h2>
+
+            <p>We have modified original BEM to make markup more elegant. Now you can write clear markup with minimum code. How it works.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col col-sm3 features_item">
+        <div class="card">
+          <figure class="card_header">
+            <img class="card_img" alt="Less &amp; LESS Hat" src="dist/img/feature_less.jpg">
+          </figure>
+          <div class="card_content">
+            <h2 class="card_title">Less &amp; <br/>LESS Hat</h2>
+
+            <p>Less is easy to learn but powerfull css preprocessor. Less helps us to develop and customize Weking. And Less Hat helps us to develop with comfort.</p>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <!-- HERO HEADING -->
-    <header class="header header-primary">
-        <div class="header_wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-sm6">
-                        <img ng-src="dist/img/logo.svg" alt="{{weking.product.name}}" class="header_logo"/>
-
-                        <p class="header_slogan">{{weking.product.description}}</p>
-                        <a class="header_download btn btn-secondary-xl" href="{{weking.product.download}}">Download</a>
-                        <a class="header_github btn btn-ghost-xl" href="{{weking.product.github}}">Github</a>
-                    </div>
-
-                    <div class="col col-sm6">
-                        Weking mascot
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- MAIN -->
-    <main class="main container" ng-include="'ng-include/home.html'"></main>
-
-    <!-- SHARE FAB -->
-    <div class="fab">
-        <span class="tooltip tooltip-left" data-tooltip="Share This Page">
-            <a class="fab_btn addthis_button_expanded btn btn-secondary-radius">
-                <i class="icon icon_share"></i>
-            </a>
-        </span>
+    <!-- Call to Action -->
+    <div class="home_call row">
+      <a class="btn col col_sm6-smOffsetL3-secondary-xl" href="get-started.html">Get Started</a>
     </div>
 
-    <!-- PAGINATION -->
-    <footer class="pagination row">
-        <span class="pagination_item col col-xs3-sm6-primary"></span>
+    <!-- COMPARISON -->
+    <section class="compare col_inner">
+      <div class="card card_content">
+        <h2 class="typo_h2">Weking faster then other frameworks</h2>
+        <p class="typo_title">Same site created with different frameworks consist of the following components</p>
 
-        <a href="{{weking.product.menu[1].link}}" class="pagination_item col col-xs9-sm6-primary typo_h3">
-            {{weking.product.menu[1].title}} <i class="icon icon_arrow-forward"></i>
-        </a>
+        <!-- Compare Table -->
+        <div class="pricing row">
+
+          <!-- Bootstrap -->
+          <div class="pricing_plan col col_sm4-primary">
+            <div class="pricing_plan_header">
+              <h3 class="pricing_plan_title">Bootstrap Site</h3>
+            </div>
+
+            <ul class="pricing_plan_list">
+              <li>Bootstrap - <strong>147 kb</strong></li>
+              <li>jQuery - <strong>94 kb</strong></li>
+              <li>Plugins - <strong>31 kb</strong></li>
+              <li>FontAwesome - <strong>724 kb</strong></li>
+              <li>Site Media Content - <strong>239 kb</strong></li>
+              <li>Site Styles <strong>2 kb</strong></li>
+              <li>Total - <strong>1237 kb</strong></li>
+            </ul>
+          </div>
+
+          <!-- Weking -->
+          <div class="pricing_plan col col_sm4-secondary">
+            <div class="pricing_plan_header">
+              <h3 class="pricing_plan_title">Weking Site</h3>
+            </div>
+
+            <ul class="pricing_plan_list">
+              <li>Weking - <strong>75 kb</strong></li>
+              <li>-</li>
+              <li>-</li>
+              <li>FontAwesome - <strong>724 kb</strong></li>
+              <li>Site Media Content - <strong>239 kb</strong></li>
+              <li>Site Styles <strong>2 kb</strong></li>
+              <li>Total - <strong>1040 kb</strong></li>
+            </ul>
+          </div>
+
+          <!-- Foundation -->
+          <div class="pricing_plan col col_sm4-primary">
+            <div class="pricing_plan_header">
+              <h3 class="pricing_plan_title">Foundation Site</h3>
+            </div>
+
+            <ul class="pricing_plan_list">
+              <li>Foundation - <strong>260 kb</strong></li>
+              <li>jQuery - <strong>94 kb</strong></li>
+              <li>-</li>
+              <li>FontAwesome - <strong>724 kb</strong></li>
+              <li>Site Media Content - <strong>239 kb</strong></li>
+              <li>Site Styles <strong>2 kb</strong></li>
+              <li>Total - <strong>1319 kb</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <a class="btn btn-sm-primary" href="#">Read More About Comparison</a>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="home_call row">
+      <a class="btn col col_sm6-smOffsetL3-secondary-xl" href="get-started.html">Get Started</a>
+    </div>
+
+    <!-- SOCIALS -->
+    <section class="social col_inner">
+      <div class="card card_content">
+        <h2>Get Social</h2>
+        <ul class="social_list">
+          <li class="social_list_li">
+            <a href="https://github.com/weking" target="_blank" class="social_icon social_github">GitHub</a>
+          </li>
+          <li class="social_list_li">
+            <a href="https://plus.google.com/u/0/109437832489382753652" target="_blank" class="social_icon social_gPlus">Google+</a>
+          </li>
+          <li class="social_list_li">
+            <a href="https://twitter.com/weking_project" target="_blank" class="social_icon social_twitter">Twitter</a>
+          </li>
+          <li class="social_list_li">
+            <a href="http://vk.com/weking_project" target="_blank" class="social_icon social_vk">Vkontakte</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        Built with love by <a href="https://github.com/genteelknight" target="_blank">@genteelknight</a><br>
+        Weking licensed under <a href="https://github.com/weking/weking-frontend/blob/master/LICENSE.md" target="_blank">MIT License</a>.
+        Site content licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+      </p>
     </footer>
 
-    <!-- JScripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
-    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js" async="async"></script>
-    <script src="dist/js/script.js"></script>
+  </main>
+
+  <!-- SHARE FAB -->
+  <div class="fab">
+    <span class="tooltip tooltip-left" data-tooltip="Share This Page">
+      <a class="fab_btn addthis_button_expanded btn btn-secondary-radius">
+        <i class="icon icon_share"></i>
+      </a>
+    </span>
+  </div>
+
+  <!-- PAGINATION -->
+  <footer class="pagination row">
+    <span class="pagination_item col col-xs3-sm6-primary"></span>
+
+    <a href="get-started.html" class="pagination_item col col-xs9-sm6-primary typo_h3">
+      Get Started <i class="icon icon_arrow-forward"></i>
+    </a>
+  </footer>
+
+  <!-- JScripts -->
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js" async="async"></script>
+  <script src="dist/js/script.js"></script>
 </body>
 </html>

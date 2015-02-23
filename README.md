@@ -1,46 +1,16 @@
-# Weking
+# [Weking Site](http://weking.github.io/)
 
-Weking is responsive, fast and easy toolkit for creating web interfaces.
+[Weking Frontend Framework Repo](https://github.com/weking/weking-frontend)
 
-## Features
-* BEM
-```
-.block {}
-.block__element {}
-.block--modifier {}
-```
-* Mobile-first
-* Without JavaScript & jQuery
 
-## Quick Start
+## Get Started Page
+* About Project, License etc.
+* Quick start with pure css
+* Work with Less: Source Structure, Grunt Tasks Description, Utilities Mixins Description, and Best Practice with Theme
+* Community
 
-* Download latest version
-* Copy **"dist"** folder to your project. Minimally you need `weking.min.css` file and `fonts` folder
-* Create a simple HTML5 document with Weking stylesheet
+## Core, Layout, Addons
+* Codepens with short and smart description
 
-```
-	<!doctype html>
-	<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-		<title>Page Name</title>
-	
-		<!-- ZENit stylesheet -->
-		<link rel="stylesheet" href="dist/css/weking.min.css">
-	
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-	
-	</body>
-	</html>
-```
-
-* See the code in the **"test"** folder & write your own code. Docs are in development
+## Templates, Experiments
+* Gallery of Best Practice of using Weking
