@@ -1,47 +1,30 @@
-// Component:       Form, Button
+// Component:       Form
 // Description:     Define styles for forms, form elements and buttons
 //
-// Blocks:          'btn'
-//                  'form'
+// Blocks:          'form'
 //
-// Elements:        'form__control'
+// Elements:        'form_control'
 //
-// Modifiers:       'form--stacked'
-//                  'form--aligned'
-//                  'form__control--disabled'
-//                  'btn--disabled'
-//                  'form__control--xs'
-//                  'btn--xs'
-//                  'form__control--sm'
-//                  'btn--sm'
-//                  'form__control--lg'
-//                  'btn--lg'
-//                  'form__control--xl'
-//                  'btn--xl'
-//                  'form__control--raised'
-//                  'btn--flat'
+// Modifiers:       'form-stacked'
+//                  'form-aligned'
+//                  'form_control-disabled'
+//                  'form_control-xs'
+//                  'form_control-sm'
+//                  'form_control-lg'
+//                  'form_control-xl'
+//                  'form_control-raised'
 //
 // Markup:
 //
 // <!-- FORM -->
 // <form class="form" action="#">
 //   <legend>A compact inline form</legend>
-//
-//   <input class="form__control" type="text" placeholder="Username">
-//   <input class="form__control" type="password" placeholder="Password">
-//
-//   <label>
-//     <input id="default-remember" type="checkbox"> Remember me
-//   </label>
-//
-//   <button type="submit" class="btn btn--primary">Sign in</button>
+//   <input class="form_control" type="text" placeholder="Username">
+//   <input class="form_control" type="password" placeholder="Password">
 // </form>
 //
 // ========================================================================
 
-/* ====================================
-   FORMS
-   ==================================== */
 // Styles shared between `<input>`, `<select>`, `<textarea>` & buttons
 .form_control,
 .btn {
@@ -140,6 +123,7 @@
     }
   }
 
+  // Raised input
   &[class*=raised] {
     background: @white;
     border: 2px solid transparent;
@@ -248,8 +232,22 @@ textarea {
   }
 }
 
-/* BUTTONS
-   ==================================== */
+// Component:       Button
+// Description:     Define styles for buttons
+//
+// Blocks:          'btn'
+//
+// Modifiers:       'btn-disabled'
+//                  'btn-xs'
+//                  'btn-sm'
+//                  'btn-lg'
+//                  'btn-xl'
+//                  'btn-flat'
+//                  'btn-ghost'
+//
+// Markup: <button type="submit" class="btn btn-primary-xl">Sign in</button>
+//
+// ========================================================================
 .btn {
   padding: 0 @grid-baseline*2;
   line-height: @font-line-height*1.5;
@@ -260,7 +258,6 @@ textarea {
   font-weight: bolder;
   .lh-border-radius(@input-radius);
   .z-depth-1();
-  .btn-gen('grey', @grey900, 200);
 
   // Pressed state
   &:active,
@@ -293,6 +290,10 @@ textarea {
 
 
   // Colors
+  &[class*=default] {
+    .btn-gen('grey', @grey900, 200);
+  }
+
   &[class*=primary] {
     .btn-gen('primary', @white);
   }
@@ -325,7 +326,10 @@ textarea {
   &[class*=ghost] {
     &:not(:hover) {
       background: transparent;
-      color: @grey;
+
+      &[class*=default] {
+        color: @grey;
+      }
 
       &[class*=primary] {
         color: @primary;

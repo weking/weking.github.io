@@ -1,4 +1,4 @@
-/*!
+/*
  * Name: Weking
  * Description: A brand-new modern, responsive and flexible front-end framework
  * Version: 0.1.0
@@ -6,6 +6,10 @@
  * Author: Constantine Karnaukhov
  * License: MIT License
  */
+.col_inner {
+  padding-left: 8px;
+  padding-right: 8px;
+}
 .navbar[class*=topState] {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -89,6 +93,10 @@
   .header_github {
     margin-left: 15px;
   }
+}
+.header[class*=small] .header_wrap {
+  padding-top: 120px;
+  padding-bottom: 72px;
 }
 .header[class*=primary] .header_wrap {
   background: rgba(27, 56, 88, 0.5);
@@ -187,7 +195,7 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 .pagination_item {
   padding: 24px;
@@ -236,3 +244,4 @@
   left: 0;
   line-height: 24px;
 }
+/*# sourceMappingURL=weking-theme.css.map */

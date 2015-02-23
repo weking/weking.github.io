@@ -2,8 +2,13 @@
 // ======================
 
 // Import global variables & mixins
-@import "utilities/index";
+@import "weking/utilities/index";
 @navbar-height: @grid-baseline*7;
+
+.col_inner {
+  padding-left: @grid-baseline;
+  padding-right: @grid-baseline;
+}
 
 // NAVBAR
 .navbar {
@@ -94,6 +99,12 @@
     &_github {
       margin-left: 15px;
     }
+  }
+
+  // Small header
+  &[class*=small] &_wrap {
+    padding-top: @font-line-height*5;
+    padding-bottom: @font-line-height*3;
   }
 
   // COLORS
@@ -218,7 +229,7 @@
 .pagination {
   .lh-display(~"flex");
   position: relative;
-  z-index: 0;
+  z-index: 1;
 
   &_item {
     padding: @font-line-height;
