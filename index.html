@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="weking">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -41,12 +41,22 @@
       <input checked class="menu_trigger" type="checkbox">
       <ul class="menu_ul">
         <li class="menu_li"><a class="menu_a" href="index.html">Home</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Get Started</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Core</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Addons</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Layout</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Templates</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Experiments</a></li>
+        <li class="menu_li"><a class="menu_a" href="get-started.html">Get Started</a></li>
+        <li class="menu_li"><a class="menu_a" href="core.html">Core</a></li>
+        <li class="menu_li"><a class="menu_a" href="addons.html">Addons</a></li>
+        <li class="menu_li"><a class="menu_a" href="layout.html">Layout</a></li>
+        <li class="menu_li">
+          <a class="menu_a" href="templates.html">
+            Templates
+            <span class="label label-red">IN DEV</span>
+          </a>
+        </li>
+        <li class="menu_li">
+          <a class="menu_a" href="experiments.html">
+            Experiments
+            <span class="label label-red">IN DEV</span>
+          </a>
+        </li>
       </ul>
     </section>
   </section>
@@ -56,182 +66,190 @@
     <div class="header_wrap">
       <div class="container">
         <div class="row">
-          <div class="col col-sm6">
-            <img src="dist/img/logo.svg" alt="Weking" class="header_logo"/>
+          <div class="col col_sm12">
+            <img src="dist/img/logo.svg" alt="Weking" class="header_logo aligncenter"/>
 
             <p class="header_slogan">A brand-new modern, responsive and flexible front-end framework</p>
             <a class="header_download btn btn-secondary-xl" href="#">Download</a>
             <a class="header_github btn btn-default-ghost-xl" href="https://github.com/weking">Github</a>
           </div>
 
-          <div class="col col-sm6">
-            Weking mascot
-          </div>
+          <!--<div class="col col-sm6">-->
+            <!--Weking mascot-->
+          <!--</div>-->
         </div>
       </div>
     </div>
   </header>
 
   <!-- MAIN -->
-  <main class="main container">
-    <!-- FEATURES -->
-    <section class="features row row-gutters">
-      <article class="col col-sm3 features_item">
-        <div class="card">
-          <figure class="card_header">
-            <img class="card_img" alt="CSS Power" src="dist/img/feature_css.jpg">
-          </figure>
-          <div class="card_content">
-            <h2 class="card_title">CSS <br/>Power</h2>
-            <p>Sometimes using JavaScript, or jQuery, is unreasonable. If we can create functionality without JavaScript, we must do it with only CSS.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="col col-sm3 features_item">
-        <div class="card">
-          <figure class="card_header">
-            <img class="card_img" alt="Material Design" src="dist/img/feature_design.jpg">
-          </figure>
-          <div class="card_content">
-            <h2 class="card_title ng-binding">Material <br/>Design</h2>
-
-            <p>Weking elements with the newest Google styleguide in my vision.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="col col-sm3 features_item">
-        <div class="card">
-          <figure class="card_header">
-            <img class="card_img" alt="Flexible BEM" src="dist/img/feature_bem.jpg">
-          </figure>
-          <div class="card_content">
-            <h2 class="card_title">Flexible <br/>BEM</h2>
-
-            <p>We have modified original BEM to make markup more elegant. Now you can write clear markup with minimum code. How it works.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="col col-sm3 features_item">
-        <div class="card">
-          <figure class="card_header">
-            <img class="card_img" alt="Less &amp; LESS Hat" src="dist/img/feature_less.jpg">
-          </figure>
-          <div class="card_content">
-            <h2 class="card_title">Less &amp; <br/>LESS Hat</h2>
-
-            <p>Less is easy to learn but powerfull css preprocessor. Less helps us to develop and customize Weking. And Less Hat helps us to develop with comfort.</p>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- Call to Action -->
-    <div class="home_call row">
-      <a class="btn col col_sm6-smOffsetL3-secondary-xl" href="get-started.html">Get Started</a>
-    </div>
-
-    <!-- COMPARISON -->
-    <section class="compare col_inner">
-      <div class="card card_content">
-        <h2 class="typo_h2">Weking faster then other frameworks</h2>
-        <p class="typo_title">Same site created with different frameworks consist of the following components</p>
-
-        <!-- Compare Table -->
-        <div class="pricing row">
-
-          <!-- Bootstrap -->
-          <div class="pricing_plan col col_sm4-primary">
-            <div class="pricing_plan_header">
-              <h3 class="pricing_plan_title">Bootstrap Site</h3>
+  <main class="main">
+    <div class="container">
+      <!-- FEATURES -->
+      <section class="features row row-gutters">
+        <article class="col col-sm3 features_item">
+          <div class="card">
+            <figure class="card_header">
+              <img class="card_img" alt="CSS Power" src="dist/img/feature_css.jpg">
+            </figure>
+            <div class="card_content">
+              <h2 class="card_title">CSS <br/>Power</h2>
+              <p>Sometimes using JavaScript, or jQuery, is unreasonable. If we can create functionality without JavaScript, we must do it with only CSS.</p>
             </div>
-
-            <ul class="pricing_plan_list">
-              <li>Bootstrap - <strong>147 kb</strong></li>
-              <li>jQuery - <strong>94 kb</strong></li>
-              <li>Plugins - <strong>31 kb</strong></li>
-              <li>FontAwesome - <strong>724 kb</strong></li>
-              <li>Site Media Content - <strong>239 kb</strong></li>
-              <li>Site Styles <strong>2 kb</strong></li>
-              <li>Total - <strong>1237 kb</strong></li>
-            </ul>
           </div>
+        </article>
 
-          <!-- Weking -->
-          <div class="pricing_plan col col_sm4-secondary">
-            <div class="pricing_plan_header">
-              <h3 class="pricing_plan_title">Weking Site</h3>
+        <article class="col col-sm3 features_item">
+          <div class="card">
+            <figure class="card_header">
+              <img class="card_img" alt="Material Design" src="dist/img/feature_design.jpg">
+            </figure>
+            <div class="card_content">
+              <h2 class="card_title ng-binding">Material <br/>Design</h2>
+
+              <p>Weking's Design mirrors my vision of how the newest Google styleguide interact with web.</p>
             </div>
-
-            <ul class="pricing_plan_list">
-              <li>Weking - <strong>75 kb</strong></li>
-              <li>-</li>
-              <li>-</li>
-              <li>FontAwesome - <strong>724 kb</strong></li>
-              <li>Site Media Content - <strong>239 kb</strong></li>
-              <li>Site Styles <strong>2 kb</strong></li>
-              <li>Total - <strong>1040 kb</strong></li>
-            </ul>
           </div>
+        </article>
 
-          <!-- Foundation -->
-          <div class="pricing_plan col col_sm4-primary">
-            <div class="pricing_plan_header">
-              <h3 class="pricing_plan_title">Foundation Site</h3>
+        <article class="col col-sm3 features_item">
+          <div class="card">
+            <figure class="card_header">
+              <img class="card_img" alt="Flexible BEM" src="dist/img/feature_bem.jpg">
+            </figure>
+            <div class="card_content">
+              <h2 class="card_title">Flexible <br/>BEM</h2>
+
+              <p>Weking uses modified BEM-naming to make markup more elegant. Now you can write clear markup with minimum code.</p>
             </div>
-
-            <ul class="pricing_plan_list">
-              <li>Foundation - <strong>260 kb</strong></li>
-              <li>jQuery - <strong>94 kb</strong></li>
-              <li>-</li>
-              <li>FontAwesome - <strong>724 kb</strong></li>
-              <li>Site Media Content - <strong>239 kb</strong></li>
-              <li>Site Styles <strong>2 kb</strong></li>
-              <li>Total - <strong>1319 kb</strong></li>
-            </ul>
           </div>
-        </div>
+        </article>
 
-        <a class="btn btn-sm-primary" href="#">Read More About Comparison</a>
+        <article class="col col-sm3 features_item">
+          <div class="card">
+            <figure class="card_header">
+              <img class="card_img" alt="Less &amp; LESS Hat" src="dist/img/feature_less.jpg">
+            </figure>
+            <div class="card_content">
+              <h2 class="card_title">Less &amp; <br/>LESS Hat</h2>
+
+              <p>Weking developed with Less, easy but powerfull css preprocessor, and LESS Hat, most popular Less mixins bundle.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Call to Action -->
+      <div class="home_call row">
+        <a class="btn col col_sm6-smOffsetL3-secondary-xl" href="get-started.html">Get Started</a>
       </div>
-    </section>
 
-    <!-- Call to Action -->
-    <div class="home_call row">
-      <a class="btn col col_sm6-smOffsetL3-secondary-xl" href="get-started.html">Get Started</a>
-    </div>
+      <!-- COMPARISON -->
+      <section class="compare">
+        <div class="card card_content">
+          <h2 class="typo_h2">Weking faster then other frameworks</h2>
+          <p class="typo_title">Same site created with different frameworks consist of the following components</p>
 
-    <!-- SOCIALS -->
-    <section class="social col_inner">
-      <div class="card card_content">
-        <h2>Get Social</h2>
-        <ul class="social_list">
-          <li class="social_list_li">
-            <a href="https://github.com/weking" target="_blank" class="social_icon social_github">GitHub</a>
-          </li>
-          <li class="social_list_li">
-            <a href="https://plus.google.com/u/0/109437832489382753652" target="_blank" class="social_icon social_gPlus">Google+</a>
-          </li>
-          <li class="social_list_li">
-            <a href="https://twitter.com/weking_project" target="_blank" class="social_icon social_twitter">Twitter</a>
-          </li>
-          <li class="social_list_li">
-            <a href="http://vk.com/weking_project" target="_blank" class="social_icon social_vk">Vkontakte</a>
-          </li>
-        </ul>
+          <!-- Compare Table -->
+          <div class="pricing row">
+
+            <!-- Bootstrap -->
+            <div class="pricing_plan col col_sm4-primary">
+              <div class="pricing_plan_header">
+                <h3 class="pricing_plan_title">Bootstrap</h3>
+              </div>
+
+              <ul class="pricing_plan_list">
+                <li>Bootstrap - <strong>147 kb</strong></li>
+                <li>jQuery - <strong>94 kb</strong></li>
+                <li>Plugins - <strong>31 kb</strong></li>
+                <li>FontAwesome - <strong>724 kb</strong></li>
+                <li>Site Media Content - <strong>239 kb</strong></li>
+                <li>Site Styles <strong>2 kb</strong></li>
+                <li>Total - <strong>1237 kb</strong></li>
+              </ul>
+            </div>
+
+            <!-- Weking -->
+            <div class="pricing_plan col col_sm4-secondary">
+              <div class="pricing_plan_header">
+                <h3 class="pricing_plan_title">Weking</h3>
+              </div>
+
+              <ul class="pricing_plan_list">
+                <li>Weking - <strong>75 kb</strong></li>
+                <li>-</li>
+                <li>-</li>
+                <li>FontAwesome - <strong>724 kb</strong></li>
+                <li>Site Media Content - <strong>239 kb</strong></li>
+                <li>Site Styles <strong>2 kb</strong></li>
+                <li>Total - <strong>1040 kb</strong></li>
+              </ul>
+            </div>
+
+            <!-- Foundation -->
+            <div class="pricing_plan col col_sm4-primary">
+              <div class="pricing_plan_header">
+                <h3 class="pricing_plan_title">Foundation</h3>
+              </div>
+
+              <ul class="pricing_plan_list">
+                <li>Foundation - <strong>260 kb</strong></li>
+                <li>jQuery - <strong>94 kb</strong></li>
+                <li>-</li>
+                <li>FontAwesome - <strong>724 kb</strong></li>
+                <li>Site Media Content - <strong>239 kb</strong></li>
+                <li>Site Styles <strong>2 kb</strong></li>
+                <li>Total - <strong>1319 kb</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <a class="btn btn-sm-primary" href="#">Read More About Comparison</a>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <div class="home_call row">
+        <a class="btn col col_sm6-smOffsetL3-secondary-xl" href="get-started.html">Get Started</a>
       </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p>
-        Built with love by <a href="https://github.com/genteelknight" target="_blank">@genteelknight</a><br>
-        Weking licensed under <a href="https://github.com/weking/weking-frontend/blob/master/LICENSE.md" target="_blank">MIT License</a>.
-        Site content licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
-      </p>
-    </footer>
+      <!-- SOCIALS -->
+      <section class="social">
+        <div class="card card_content">
+          <h2 class="typo_h2">Get Social</h2>
+          <div class="social_list">
+            <a class="social_list_li clearfix" href="https://github.com/weking" target="_blank">
+              <span class="social_icon social_github"></span>
+              <p>
+                All Weking Project's repositories in one place. There you can help to develop Weking with fork and pull requests, or report bugs via issues.
+              </p>
+            </a>
+            <a class="social_list_li clearfix" href="https://twitter.com/weking_project" target="_blank">
+              <span class="social_icon social_twitter"></span>
+              <p>Follow us on Twitter and be the first to receive news and updates.</p>
+            </a>
+            <a class="social_list_li clearfix" href="https://plus.google.com/communities/114882845116732567865" target="_blank">
+              <span class="social_icon social_gPlus"></span>
+              <p>Google+ community serves to discussions and helping to develop with Weking</p>
+            </a>
+            <a class="social_list_li clearfix" href="http://vk.com/weking_project" target="_blank">
+              <span class="social_icon social_vk"></span>
+              <p>Russian-language community.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>
+          Built with love by <a href="https://github.com/genteelknight" target="_blank">@genteelknight</a><br>
+          Weking licensed under <a href="https://github.com/weking/weking-frontend/blob/master/LICENSE.md" target="_blank">MIT License</a>.
+          Site content licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+        </p>
+      </footer>
+    </div>
 
   </main>
 
@@ -246,15 +264,15 @@
 
   <!-- PAGINATION -->
   <footer class="pagination row">
-    <span class="pagination_item col col-xs3-sm6-primary"></span>
+    <span class="pagination_item col col_xs3_sm6-primary typo_h3"></span>
 
-    <a href="get-started.html" class="pagination_item col col-xs9-sm6-primary typo_h3">
+    <a href="get-started.html" class="pagination_item col col_xs9_sm6-primary typo_h3">
       Get Started <i class="icon icon_arrow-forward"></i>
     </a>
   </footer>
 
   <!-- JScripts -->
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js" async="async"></script>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-54ce258b7e3ce750" async="async"></script>
   <script src="dist/js/script.js"></script>
 </body>
 </html>

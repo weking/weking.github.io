@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en" ng-app="weking">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get Started // Weking</title>
+  <title>Get Started - Weking</title>
 
   <link rel="stylesheet" href="dist/css/weking.css">
   <link rel="stylesheet" href="dist/css/weking-theme.css">
@@ -41,12 +41,22 @@
       <input checked class="menu_trigger" type="checkbox">
       <ul class="menu_ul">
         <li class="menu_li"><a class="menu_a" href="index.html">Home</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Get Started</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Core</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Addons</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Layout</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Templates</a></li>
-        <li class="menu_li"><a class="menu_a" href="index.html">Experiments</a></li>
+        <li class="menu_li"><a class="menu_a" href="get-started.html">Get Started</a></li>
+        <li class="menu_li"><a class="menu_a" href="core.html">Core</a></li>
+        <li class="menu_li"><a class="menu_a" href="addons.html">Addons</a></li>
+        <li class="menu_li"><a class="menu_a" href="layout.html">Layout</a></li>
+        <li class="menu_li">
+          <a class="menu_a" href="templates.html">
+            Templates
+            <span class="label label-red">IN DEV</span>
+          </a>
+        </li>
+        <li class="menu_li">
+          <a class="menu_a" href="experiments.html">
+            Experiments
+            <span class="label label-red">IN DEV</span>
+          </a>
+        </li>
       </ul>
     </section>
   </section>
@@ -61,12 +71,395 @@
   </header>
 
   <!-- MAIN -->
-  <main class="main container">
-    <section class="content card">
-      <div class="card_content">
-        Get Started
-      </div>
-    </section>
+  <main class="main">
+    <div class="container">
+      <section class="content card">
+        <div class="card_content">
+          <h2 class="typo_h2">What is Weking</h2>
+          <p>Weking is a brand-new modern, responsive and flexible front-end framework. It's designed with Google's <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">Material Design guidelines</a> and . All functionality created with CSS and built with Less.</p>
+
+          <h3 class="typo_h3">Flexible BEM</h3>
+          <p>Weking uses modified BEM-naming to make markup more elegant. <a href="https://en.bem.info/" target="_blank">BEM</a> is technology for creating web applications by Yandex. BEM means Block, Element, Modifier.</p>
+          <p>In Weking I implemented the approach of class parsing. With this approach class naming looks like that:</p>
+          <pre>.blockName // Block
+.blockName.block-modifier1-modifier2 // Block with modifiers
+.blockName_elementName // Element
+.blockName_elementName.blockName_elementName-modifier1-modifier2 // Element with modifiers</pre>
+
+          <p>With CSS3 Selectors we can parse class. And if classname contains modifier name, browser apply modifier styles for block/element. <a href="#best-practices-modifiers">How to create modifier</a></p>
+
+          <h3 class="typo_h3">License</h3>
+          <p>Weking front-end framework, LESS Hat and HINT.css are licensed under MIT License. Material Design Icons licensed by CC Attribution-ShareAlike 4.0 International.</p>
+
+          <hr>
+
+          <h2 class="typo_h2" id="quick-start">Quick Start</h2>
+          <p>Download default precompiled Weking (CSS and fonts). After unzip archive you have next directory structure:</p>
+
+<pre>
+weking/
+├── dist/
+│   ├── css/
+│   │   ├── weking.css
+│   │   ├── weking.css.map
+│   │   ├── weking.min.css
+│   │   ├── weking-theme.css
+│   │   ├── weking-theme.css.map
+│   │   └── weking-theme.min.css
+│   └── fonts/
+│       ├── Material-Design-Iconic-Font.eot
+│       ├── Material-Design-Iconic-Font.svg
+│       ├── Material-Design-Iconic-Font.ttf
+│       ├── Material-Design-Iconic-Font.woff
+│       └── Material-Design-Iconic-Font.woff2
+└── basic.html</pre>
+
+          <p>Open <code>basic.html</code>, change code for your project and save file as <code>index.html</code></p>
+          <p>See code examples and write code</p>
+
+          <hr>
+
+          <h2 class="typo_h2" id="start-with-less">Start with Less</h2>
+          <p>Weking uses Grunt for its build system. Firstly you must <a href="http://nodejs.org/download/">install Node.js</a> (includes npm). After that install Grunt CLI:</p>
+          <pre>$ npm install -g grunt-cli</pre>
+
+          <p>Dowload source files from <a href="https://github.com/weking/weking-frontend">GitHub</a></p>
+          <pre>$ git clone https://github.com/weking/weking-frontend.git</pre>
+
+          <p>Next install develop dependencies via npm:</p>
+          <pre>$ npm install</pre>
+
+          <h3 class="typo_h3">Source structure</h3>
+          <pre>
+weking/
+│   .gitignore
+│   basic.html
+│   Gruntfile.js
+│   LICENSE.md
+│   package.json
+│   README.md
+│
+├───dist
+│   ├───css
+│   │       weking-theme.css
+│   │       weking-theme.css.map
+│   │       weking-theme.min.css
+│   │       weking.css
+│   │       weking.css.map
+│   │       weking.min.css
+│   │
+│   └───fonts
+│           Material-Design-Iconic-Font.eot
+│           Material-Design-Iconic-Font.svg
+│           Material-Design-Iconic-Font.ttf
+│           Material-Design-Iconic-Font.woff
+│
+└───src
+    ├───fonts
+    │       Material-Design-Iconic-Font.eot
+    │       Material-Design-Iconic-Font.svg
+    │       Material-Design-Iconic-Font.ttf
+    │       Material-Design-Iconic-Font.woff
+    │
+    └───less
+        │   weking-theme.less
+        │   weking.less
+        │
+        └───weking
+            ├───addons
+            │   │   accordion.less
+            │   │   card.less
+            │   │   form-advanced.less
+            │   │   group.less
+            │   │   icons.less
+            │   │   label.less
+            │   │   modal.less
+            │   │   navdrawer.less
+            │   │   progress.less
+            │   │   tabs.less
+            │   │   tooltip.less
+            │   │
+            │   └───icons
+            │           actions.less
+            │           alert.less
+            │           audio-video.less
+            │           communication.less
+            │           content.less
+            │           device.less
+            │           editor.less
+            │           file.less
+            │           hardware.less
+            │           image.less
+            │           maps.less
+            │           navigation.less
+            │           notification.less
+            │           social.less
+            │           toggle.less
+            │
+            ├───core
+            │       base.less
+            │       form.less
+            │       grid.less
+            │       menu.less
+            │       print.less
+            │       table.less
+            │
+            ├───layout
+            │       index.less
+            │       pricing.less
+            │
+            └───utilities
+                    card.less
+                    form.less
+                    grid.less
+                    index.less
+                    lesshat.less
+                    menu.less
+                    mixins.less
+                    progress.less
+                    table.less
+                    variables.less</pre>
+
+          <h3 class="typo_h3">Grunt tasks</h3>
+          <p><code>compile-weking</code> compiles from source only framework stylesheet (<code>weking.css</code>).</p>
+          <p><code>compile-theme</code> compiles from source only theme stylesheet (<code>weking-theme.css</code>).</p>
+          <p><code>compile-weking-newer</code> watch changes in framework source files and recomple framework stylesheet.</p>
+          <p><code>compile-theme-newer</code> watch changes in theme source files and recomple theme stylesheet.</p>
+          <p><code>compile</code> compiles from source both framework and theme stylesheets.</p>
+          <p><code>compile-newer</code> watch changes in both framework and theme source files and recomple them. Also used as <code>default</code> task.</p>
+          <p><code>production-weking</code> compiles and minify framework stylesheet.</p>
+          <p><code>production-theme</code> compiles and minify theme stylesheet.</p>
+          <p><code>production</code> compiles and minify both framework and theme stylesheets.</p>
+
+          <h3 class="typo_h3">Weking variables</h3>
+
+          <p>You can find all these Weking variables in <code>src/less/weking/utilities/variables.less</code></p>
+
+          <h4 class="typo_h4" id="color-swatches">Color swatches</h4>
+          <p>...</p>
+
+          <h4 class="typo_h4">Media queries</h4>
+          <p><code>@screen-xs</code> define media query breakpont for mobiles (default: 480px)</p>
+          <p><code>@screen-sm</code> define media query breakpont for tablets (default: 768px)</p>
+          <p><code>@screen-md</code> define media query breakpont for small desktops (default: 992px)</p>
+          <p><code>@screen-lg</code> define media query breakpont for generic desktops (default: 1200px)</p>
+          <p><code>@screen-xl</code> define media query breakpont for wide desktops (default: 1600px)</p>
+          <p>See how to use these variables in your media queries <a href="#best-practices-mediaquery">in best practices section</a>.</p>
+
+          <h4 class="typo_h4">Base variables</h4>
+          <p><code>@body-bg</code> `body` background color ( default: @white )</p>
+          <p><code>@text-color</code> `body` text color ( default: @grey900 )</p>
+          <p><code>@link-color</code> link element color ( default: @secondary )</p>
+          <p><code>@link-hover-color</code> link element color on hover ( default: darken(@link-color, 10%) )</p>
+          <p><code>@basic-radius</code> default `border-radius` value ( default: 3px )</p>
+
+          <h4 class="typo_h4">Grid system variables</h4>
+          <p><code>@grid-columns</code> number of columns in grid (default: 12)</p>
+          <p><code>@grid-baseline</code> grid baseline used for vertical rythm (default: 8px)</p>
+          <p><code>@container-size</code> number of columns covered by container (default: 8)</p>
+          <p><code>@container-max-width</code> max-width value of container (default: 1200px)</p>
+
+          <h4 class="typo_h4">Typography variables</h4>
+          <p><code>@font-size</code> default font-size (default: 14px)</p>
+          <p><code>@font-line-height</code> default text line-height used for vertical rythm (default: @grid-baseline*3)</p>
+          <p><code>@font-family</code> defaul font-family (default: Roboto, sans-serif)</p>
+          <p><code>@font-family-mono</code> monospaced font-family for `pre`, `code`, `kbd` (default: Monaco, Menlo, Consolas, "Courier New", monospace)</p>
+          <p><code>@font-family-headings</code> font-family for headings (default: @font-family)</p>
+
+          <h4 class="typo_h4">Form elements variables</h4>
+          <p>`&lt;input&gt;`, `&lt;select&gt;`, `&lt;textarea&gt;` are inputs</p>
+          <p><code>@input-color</code> border color for inputs (default: @grey)</p>
+          <p><code>@input-text-color</code> text color for inputs (default: @text-color)</p>
+          <p><code>@input-focus-color</code> border color for inputs on focus (default: @secondary)</p>
+          <p><code>@input-error-color</code> border color for inputs on error (default: @red)</p>
+          <p><code>@input-radius</code> border radius for inputs and buttons (default: @basic-radius)</p>
+
+          <h4 class="typo_h4">Menus variables</h4>
+          <p><code>@menu-bg</code> default menu background color (default: 'grey')</p>
+          <p><code>@menu-color</code> default menu text color (default: @grey90)</p>
+          <p><code>@sub-menu-bg</code> default dropdown menu background color (default: @white)</p>
+          <p><code>@sub-menu-color</code> default dropdown menu text color (default: @grey900)</p>
+
+          <h4 class="typo_h4">Modals variables</h4>
+          <p><code>@modal-bg</code> modal overlay background color ( default: fade(@grey900, 50%) )</p>
+          <p><code>@modal-dialog-bg</code> modal dialog background color ( default: @white )</p>
+          <p><code>@modal-dialog-color</code> modal dialog text color ( default: @text-color )</p>
+          <p><code>@modal-radius</code> modal dialog `border-radius` value ( default: @basic-radius )</p>
+
+          <h3 class="typo_h3">Weking mixins</h3>
+
+          <h4 class="typo_h4">Main mixins</h4>
+          <p>Main mixins are in <code>src/less/weking/utilities/mixins.less</code>.</p>
+
+          <h5 class="typo_h5">Font mixin</h5>
+          <p>Weking has good vertical rythm system. Vertical rythm is important part of UX design. And you can use <code>.font</code>-mixin to not break vertical rythm.</p>
+
+          <pre>.font(@font-size)</pre>
+
+          <p>This code returns <code>font-size, line-height</code> properties. <code>line-height</code> calculates depending on @font-size.</p>
+
+          <h5 class="typo_h5">Animation mixin</h5>
+          <pre>.animate(@props, @time, @function)</pre>
+
+          <p>This mixin adds transition to your element. Arguments are:</p>
+          <ul>
+            <li><code>@props</code> - transition properties</li>
+            <li><code>@time</code> - transition duration</li>
+            <li><code>@function</code> - transtion timing function</li>
+          </ul>
+
+          <h5 class="typo_h5">Z-Depth mixin</h5>
+          <p>In Material Design styleguides "objects cast shadows" to show their position on z-axis. In Weking you can easily add this effect to objects. For this purpose use next mixins:</p>
+
+          <pre>
+.z-depth-0() // Remove shadow
+.z-depth-1(@position) // First level shadow
+.z-depth-2(@position) // Second level shadow
+.z-depth-3(@position) // Third level shadow
+.z-depth-4(@position) // Fourth level shadow
+.z-depth-5(@position) // Fifth level shadow</pre>
+
+          <p><strong>Quick tip</strong>: <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">read more about Material Design</a> before start design interface</p>
+
+          <h4 class="typo_h4">Module's mixins</h4>
+          <p>This mixins used for colorising elements.</p>
+
+          <pre>
+// Card coloriser
+//   @bg - card background color (type: HEX color)
+//   @color - card text color (type: HEX color)
+.card-gen(@bg, @color)
+
+// Button Generator
+//   @bg - name of background color swatch (type: string, ex. 'primary')
+//   @color - button text color (type: HEX color)
+//   @bg-level - level of background color swatch (type: number, default: 500)
+.btn-gen(@bg, @color, @bg-level)
+
+// Menu generator
+//   @bg - name of background color swatch (type: string, ex. 'primary')
+//   @color - menu text color (type: HEX color)
+//   @indicator - indicator color of active tab (type: HEX color, default: @color)
+//   @bg-level - level of background color swatch (type: number, default: 500)
+.menu-gen(@bg, @color, @indicator, @bg-level)
+
+// Progress generator
+//   @color - progress bar color (type: HEX color)
+.progress-gen(@color)
+
+// Table generator
+//   @bg - name of background color swatch (type: string, ex. 'primary')
+//   @color - button text color (type: HEX color)
+//   @bg-level - level of background color swatch (type: number, default: 500)
+.table-gen(@bg, @color, @bg-level)</pre>
+
+          <h4 class="typo_h4">Grid mixins</h4>
+          <p>Sometimes you need use some properties from grid elements without using grid. Next mixins created for this purpose.</p>
+
+          <p><code>.make-column(@size)</code> - return width property of <code>@size</code>-column</p>
+          <p><code>.make-offsetL(@size)</code> - return margin-left for <code>@size</code>-columns</p>
+          <p><code>.make-offsetR(@size)</code> - return margin-right for <code>@size</code>-columns</p>
+
+          <hr>
+
+          <h2 class="typo_h2" id="best-practices">Best practices to write code with Weking</h2>
+
+          <h3 class="typo_h3" id="best-practices-modifiers">Create modifier</h3>
+
+          <pre>
+// Element styles
+.blockName_elementName {
+  ...
+}
+
+// Element with modifier styles
+.blockName_elementName[class*=modifierName] {
+  ...
+}</pre>
+
+          <h3 class="typo_h3" id="best-practices-mediaquery">Create media queries</h3>
+          <p>Weking is mobile-first.</p>
+          <pre>
+// Styles for all devices
+...
+
+// Styles for more than mobiles
+@media (min-width: @screen-sm) {
+  ...
+}
+
+// Styles for more than tablets
+@media (min-width: @screen-md) {
+  ...
+}
+
+// Styles for desktops
+@media (min-width: @screen-lg) {
+  ...
+}
+
+// Styles for wide desktops
+@media (min-width: @screen-xl) {
+  ...
+}
+          </pre>
+
+          <h3 class="typo_h3" id="best-practices-colorswatch">Custom color swatch</h3>
+          <p>...</p>
+          <pre>// Create a custom color swatch
+@custom:         @custom500;
+
+@custom50:       #E8F5E9;
+@custom100:      #C8E6C9;
+@custom200:      #A5D6A7;
+@custom300:      #81C784;
+@custom400:      #66BB6A;
+@custom500:      #4CAF50;
+@custom600:      #43A047;
+@custom700:      #388E3C;
+@custom800:      #2E7D32;
+@custom900:      #1B5E20;
+
+@customA100:     #B9F6CA;
+@customA200:     #69F0AE;
+@customA400:     #00E676;
+@customA700:     #00C853;</pre>
+
+          <h3 class="typo_h3" id="best-practices-colorizing">Colorizing modules</h3>
+          <pre>.menu {
+  // Rounded corners for menu
+  .lh-border-radius(@basic-radius;);
+
+  // Create new color for menu
+  &[class*=red] {
+    .menu-gen('red', @white, 300);
+  }
+
+  // Redefine Z position for fixed menus
+  &-fixedTop {
+    .z-depth-3;
+  }
+
+  &-fixedBottom {
+    .z-depth-3('top');
+  }
+}
+
+.table {
+  // Add shadow to table header
+  &_header {
+    .z-depth-1;
+  }
+
+  // Create new color for table
+  &[class*=red] {
+    .table-gen('red', @white);
+  }
+}</pre>
+          <p>Read more about that in module page.</p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <!-- SHARE FAB -->
@@ -80,17 +473,17 @@
 
   <!-- PAGINATION -->
   <footer class="pagination row">
-    <a href="index.html" class="pagination_item col col-xs3-sm6-primary typo_h3">
+    <a href="index.html" class="pagination_item col col_xs3_sm6-primary typo_h3">
       <i class="icon icon_arrow-back"></i> Home
     </a>
 
-    <a href="core.html" class="pagination_item col col-xs9-sm6-primary typo_h3">
+    <a href="core.html" class="pagination_item col col_xs9_sm6-secondary typo_h3">
       Core <i class="icon icon_arrow-forward"></i>
     </a>
   </footer>
 
   <!-- JScripts -->
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js" async="async"></script>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-54ce258b7e3ce750" async="async"></script>
   <script src="dist/js/script.js"></script>
 </body>
 </html>
