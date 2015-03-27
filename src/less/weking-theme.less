@@ -5,11 +5,6 @@
 @import "weking/utilities/index";
 @navbar-height: @grid-baseline*7;
 
-.col_inner {
-  padding-left: @grid-baseline;
-  padding-right: @grid-baseline;
-}
-
 // NAVBAR
 .navbar {
   // Top state
@@ -59,6 +54,13 @@
   z-index: 1000;
 }
 
+.navDrawer .label {
+  display: inline-block;
+  padding: 0 10px;
+  margin: 12px 0;
+  float: right;
+}
+
 // HERO IMAGE
 .header {
   color: @white;
@@ -84,12 +86,12 @@
 
   @media (min-width: @screen-sm) {
     &_wrap {
-      text-align: left;
+//      text-align: left;
       padding: @grid-baseline*18 0;
 
-      .col {
-        float: right;
-      }
+//      .col {
+//        float: right;
+//      }
     }
 
     &_slogan {
@@ -160,18 +162,32 @@
 }
 
 .social {
-  text-align: center;
-
-  h2 {
+  .typo_h2 {
     margin-bottom: @font-line-height;
+    text-align: center;
   }
 
-  &_list {
-    margin: 0;
-    padding: 0;
+  &_list_li {
+    display: block;
+    text-decoration: none;
+    margin-bottom: @font-line-height;
+    color: @text-color !important;
+    text-align: center;
 
-    &_li {
-      display: inline-block;
+    @media (min-width: @screen-sm) {
+      text-align: left;
+      .lh-display(~"flex");
+      .lh-align-items(~"center");
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &:hover {
+      .social_icon {
+        border-color: fade(@primary100, 50);
+      }
     }
   }
 
@@ -186,55 +202,60 @@
     color: @primary;
     text-decoration: none;
 
-    // hide text
-    display: block;
-    width: @font-line-height*3;
-    height: @font-line-height*3;
-    overflow: hidden;
+    margin-bottom: @grid-baseline*2;
+    display: inline-block;
+    width: @font-line-height*4;
+    height: @font-line-height*4;
+    border: 5px solid transparent;
+    .animate(~"border-color");
+    .lh-border-radius(99px);
+
+    // Center icon
+    text-align: center;
+    padding: ( @font-line-height * (4 - 1.75) - 10 ) / 2 0;
 
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    &:hover {
-      color: fade(@primary, 80%);
+    @media (min-width: @screen-sm) {
+      float: left;
+      margin-bottom: 0;
+      margin-right: @grid-baseline*2;
     }
 
     &:before {
-      font-size: @font-line-height*3;
+      font-size: @font-line-height*1.75;
     }
   }
 
   .social_twitter:before {
-    content: "\f081";
+    content: "\f099";
   }
 
   .social_github:before {
-    content: "\f092";
+    content: "\f113";
   }
 
   .social_gPlus:before {
-    content: "\f0d4";
+    content: "\f0d5";
   }
 
-  .social_vk {
-    width: 78px;
-
-    &:before {
-      content: "\f189";
-    }
+  .social_vk:before {
+    content: "\f189";
   }
 }
 
 .pagination {
-  .lh-display(~"flex");
   position: relative;
   z-index: 1;
 
   &_item {
-    padding: @font-line-height;
+    padding-top: @font-line-height;
+    padding-bottom: @font-line-height;
     color: @white !important;
     text-decoration: none;
+    min-height: @font-line-height*4;
 
     &:last-child {
       text-align: right;
@@ -242,6 +263,26 @@
 
     &[class*=primary] {
       background: @primary;
+    }
+
+    &[class*=secondary] {
+      background: @secondary;
+    }
+
+    &[class*=blue] {
+      background: @blue;
+    }
+
+    &[class*=green] {
+      background: @green;
+    }
+
+    &[class*=orange] {
+      background: @orange;
+    }
+
+    &[class*=black] {
+      background: @black;
     }
   }
 }
