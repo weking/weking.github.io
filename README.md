@@ -4,7 +4,7 @@
 
 
 ## Get Started Page
-* About Project, License etc.
+* About Project, More about features, License etc.
 * Quick start with pure css
 * Work with Less: Source Structure, Grunt Tasks Description, Utilities Mixins Description, and Best Practice with Theme
 * Community
