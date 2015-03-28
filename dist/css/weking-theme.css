@@ -94,7 +94,10 @@
 }
 .header[class*=small] .header_wrap {
   padding-top: 120px;
-  padding-bottom: 72px;
+  padding-bottom: 48px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: left;
 }
 .header[class*=primary] .header_wrap {
   background: rgba(27, 56, 88, 0.5);
@@ -234,6 +237,14 @@
   color: #ffffff !important;
   text-decoration: none;
   min-height: 96px;
+}
+.pagination_item span {
+  display: none;
+}
+@media (min-width: 768px) {
+  .pagination_item span {
+    display: inline;
+  }
 }
 .pagination_item:last-child {
   text-align: right;

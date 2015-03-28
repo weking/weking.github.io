@@ -106,7 +106,10 @@
   // Small header
   &[class*=small] &_wrap {
     padding-top: @font-line-height*5;
-    padding-bottom: @font-line-height*3;
+    padding-bottom: @font-line-height*2;
+    padding-left: @grid-baseline;
+    padding-right: @grid-baseline;
+    text-align: left;
   }
 
   // COLORS
@@ -256,6 +259,13 @@
     color: @white !important;
     text-decoration: none;
     min-height: @font-line-height*4;
+
+    span {
+      display: none;
+      @media (min-width: @screen-sm) {
+        display: inline;
+      }
+    }
 
     &:last-child {
       text-align: right;
