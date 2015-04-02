@@ -80,13 +80,21 @@
 
           <h3 class="typo_h3">Flexible BEM</h3>
           <p>Weking uses modified BEM-naming to make markup more elegant. <a href="https://en.bem.info/" target="_blank">BEM</a> is technology for creating web applications by Yandex. BEM means Block, Element, Modifier.</p>
-          <p>In Weking I implemented the approach of class parsing. With this approach class naming looks like that:</p>
-          <pre>.blockName // Block
-.blockName.block-modifier1-modifier2 // Block with modifiers
-.blockName_elementName // Element
-.blockName_elementName.blockName_elementName-modifier1-modifier2 // Element with modifiers</pre>
+          <p>Weking selectors are shorter than original BEM because its use camel case and one class for modifiers. With CSS3 Selectors we can easily parse class. So if classname contains modifier name, browser apply modifier styles for block/element. <a href="#best-practices-modifiers">How to create modifier</a>. In HTML its may looks like that:</p>
 
-          <p>With CSS3 Selectors we can parse class. And if classname contains modifier name, browser apply modifier styles for block/element. <a href="#best-practices-modifiers">How to create modifier</a></p>
+          <pre class="codeHighlight"><code class="html">&lt;!-- Block --&gt;
+&lt;tag class="blockName"&gt;Block&lt;/tag&gt;
+
+&lt;!-- Element --&gt;
+&lt;tag class="blockName_elementName"&gt;Element&lt;/tag&gt;
+
+&lt;!-- Modifiers --&gt;
+&lt;tag class="blockName blockName-modifier1-modifier2"&gt;Block with Modifiers&lt;/tag&gt;
+&lt;tag class="blockName_elementName blockName_elementName-modifier1-modifier2"&gt;Element with Modifiers&lt;/tag&gt;
+
+&lt;!-- Or so --&gt;
+&lt;tag class="blockName -modifier1 -modifier2"&gt;Block with Modifiers&lt;/tag&gt;
+&lt;tag class="blockName_elementName -modifier1 -modifier2"&gt;Element with Modifiers&lt;/tag&gt;</code></pre>
 
           <h3 class="typo_h3">License</h3>
           <p>Weking front-end framework, LESS Hat and HINT.css are licensed under MIT License. Material Design Icons licensed by CC Attribution-ShareAlike 4.0 International.</p>
@@ -96,7 +104,11 @@
           <h2 class="typo_h2" id="quick-start">Quick Start</h2>
           <p>Download default precompiled Weking (CSS and fonts). After unzip archive you have next directory structure:</p>
 
-<pre>
+          <div class="accordion group">
+            <label class="btn btn-primary-sm-flat" for="cssStructureTrigger">Show / Hide Structure</label>
+            <input id="cssStructureTrigger" class="accordion_trigger" name="accordion_trigger" type="checkbox" />
+            <div class="accordion_content">
+              <pre>
 weking/
 ├── dist/
 │   ├── css/
@@ -113,6 +125,8 @@ weking/
 │       ├── Material-Design-Iconic-Font.woff
 │       └── Material-Design-Iconic-Font.woff2
 └── basic.html</pre>
+            </div>
+          </div>
 
           <p>Open <code>basic.html</code>, change code for your project and save file as <code>index.html</code></p>
           <p>See code examples and write code</p>
@@ -130,7 +144,12 @@ weking/
           <pre>$ npm install</pre>
 
           <h3 class="typo_h3">Source structure</h3>
-          <pre>
+
+          <div class="accordion group">
+            <label class="btn btn-primary-sm-flat" for="lessStructureTrigger">Show / Hide Structure</label>
+            <input id="lessStructureTrigger" class="accordion_trigger" name="accordion_trigger" type="checkbox" />
+            <div class="accordion_content">
+              <pre>
 weking/
 │   .gitignore
 │   basic.html
@@ -219,6 +238,8 @@ weking/
                     progress.less
                     table.less
                     variables.less</pre>
+            </div>
+          </div>
 
           <h3 class="typo_h3">Grunt tasks</h3>
           <p><code>compile-weking</code> compiles from source only framework stylesheet (<code>weking.css</code>).</p>
@@ -294,12 +315,12 @@ weking/
           <h5 class="typo_h5">Font mixin</h5>
           <p>Weking has good vertical rythm system. Vertical rythm is important part of UX design. And you can use <code>.font</code>-mixin to not break vertical rythm.</p>
 
-          <pre>.font(@font-size)</pre>
+          <pre class="codeHighlight"><code class="less">.font(@font-size)</code></pre>
 
           <p>This code returns <code>font-size, line-height</code> properties. <code>line-height</code> calculates depending on @font-size.</p>
 
           <h5 class="typo_h5">Animation mixin</h5>
-          <pre>.animate(@props, @time, @function)</pre>
+          <pre class="codeHighlight"><code class="less">.animate(@props, @time, @function)</code></pre>
 
           <p>This mixin adds transition to your element. Arguments are:</p>
           <ul>
@@ -311,21 +332,19 @@ weking/
           <h5 class="typo_h5">Z-Depth mixin</h5>
           <p>In Material Design styleguides "objects cast shadows" to show their position on z-axis. In Weking you can easily add this effect to objects. For this purpose use next mixins:</p>
 
-          <pre>
-.z-depth-0() // Remove shadow
+          <pre class="codeHighlight"><code class="less">.z-depth-0() // Remove shadow
 .z-depth-1(@position) // First level shadow
 .z-depth-2(@position) // Second level shadow
 .z-depth-3(@position) // Third level shadow
 .z-depth-4(@position) // Fourth level shadow
-.z-depth-5(@position) // Fifth level shadow</pre>
+.z-depth-5(@position) // Fifth level shadow</code></pre>
 
           <p><strong>Quick tip</strong>: <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">read more about Material Design</a> before start design interface</p>
 
           <h4 class="typo_h4">Module's mixins</h4>
           <p>This mixins used for colorising elements.</p>
 
-          <pre>
-// Card coloriser
+          <pre class="codeHighlight"><code class="less">// Card coloriser
 //   @bg - card background color (type: HEX color)
 //   @color - card text color (type: HEX color)
 .card-gen(@bg, @color)
@@ -351,7 +370,7 @@ weking/
 //   @bg - name of background color swatch (type: string, ex. 'primary')
 //   @color - button text color (type: HEX color)
 //   @bg-level - level of background color swatch (type: number, default: 500)
-.table-gen(@bg, @color, @bg-level)</pre>
+.table-gen(@bg, @color, @bg-level)</code></pre>
 
           <h4 class="typo_h4">Grid mixins</h4>
           <p>Sometimes you need use some properties from grid elements without using grid. Next mixins created for this purpose.</p>
@@ -366,8 +385,7 @@ weking/
 
           <h3 class="typo_h3" id="best-practices-modifiers">Create modifier</h3>
 
-          <pre>
-// Element styles
+          <pre class="codeHighlight"><code class="less">// Element styles
 .blockName_elementName {
   ...
 }
@@ -375,12 +393,11 @@ weking/
 // Element with modifier styles
 .blockName_elementName[class*=modifierName] {
   ...
-}</pre>
+}</code></pre>
 
           <h3 class="typo_h3" id="best-practices-mediaquery">Create media queries</h3>
           <p>Weking is mobile-first.</p>
-          <pre>
-// Styles for all devices
+          <pre class="codeHighlight"><code class="less">// Styles for all devices
 ...
 
 // Styles for more than mobiles
@@ -402,11 +419,11 @@ weking/
 @media (min-width: @screen-xl) {
   ...
 }
-          </pre>
+          </code></pre>
 
           <h3 class="typo_h3" id="best-practices-colorswatch">Custom color swatch</h3>
           <p>...</p>
-          <pre>// Create a custom color swatch
+          <pre class="codeHighlight"><code class="less">// Create a custom color swatch
 @custom:         @custom500;
 
 @custom50:       #E8F5E9;
@@ -423,10 +440,10 @@ weking/
 @customA100:     #B9F6CA;
 @customA200:     #69F0AE;
 @customA400:     #00E676;
-@customA700:     #00C853;</pre>
+@customA700:     #00C853;</code></pre>
 
           <h3 class="typo_h3" id="best-practices-colorizing">Colorizing modules</h3>
-          <pre>.menu {
+          <pre class="codeHighlight"><code class="less">.menu {
   // Rounded corners for menu
   .lh-border-radius(@basic-radius;);
 
@@ -455,7 +472,7 @@ weking/
   &[class*=red] {
     .table-gen('red', @white);
   }
-}</pre>
+}</code></pre>
           <p>Read more about that in module page.</p>
         </div>
       </section>
@@ -484,6 +501,7 @@ weking/
 
   <!-- JScripts -->
   <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-54ce258b7e3ce750" async="async"></script>
+  <script src="dist/js/highlight.pack.js"></script>
   <script src="dist/js/script.js"></script>
 </body>
 </html>

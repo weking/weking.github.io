@@ -1,6 +1,7 @@
 ;(function () {
   'use strict';
 
+  // Fixed navbar
   function affixNavbar () {
     var navbar = document.querySelector('.navbar'),
       header = document.querySelector('.header');
@@ -19,5 +20,8 @@
   }
 
   affixNavbar();
+
+  // Code Highlight
+  hljs.initHighlightingOnLoad();
 
 })();

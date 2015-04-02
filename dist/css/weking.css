@@ -4078,6 +4078,37 @@ textarea {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.accordion_heading {
+  margin: 0 !important;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.accordion_content {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  -webkit-transition-property: visibility, opacity, height;
+  -moz-transition-property: visibility, opacity, height;
+  -o-transition-property: visibility, opacity, height;
+  transition-property: visibility, opacity, height;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.accordion_trigger {
+  display: none;
+}
+.accordion_trigger:checked + .accordion_content {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
 .tooltip {
   position: relative;
   display: inline-block;

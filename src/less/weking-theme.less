@@ -5,6 +5,10 @@
 @import "weking/utilities/index";
 @navbar-height: @grid-baseline*7;
 
+.accordion {
+  margin-bottom: @font-line-height;
+}
+
 // NAVBAR
 .navbar {
   // Top state
@@ -121,6 +125,17 @@
 
 // MAIN
 .main {}
+
+// CODE HIGHLIGHTING
+.codeHighlight {
+  padding: 0;
+
+  code * {
+    line-height: @font-line-height;
+  }
+}
+
+@import "github";
 
 // FEATURES BOX
 .features {
